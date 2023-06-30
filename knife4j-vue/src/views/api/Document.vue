@@ -320,7 +320,7 @@ export default {
       var clipboard = new ClipboardJS("#" + btnId, {
         text() {
           var inst = that.getCurrentI18nInstance();
-          if (inst.lang === 'zh') {
+          if (inst.lang === 'zh' || inst.lang === 'ko') {
             return markdownSingleText(api);
           } else if (inst.lang === 'us') {
             return markdownSingleTextUs(api);
@@ -413,7 +413,7 @@ export default {
             //  过滤掉忽略参数
             .filter(
               ({ name }) =>
-                !ignoreParameterAllKeys.includes(name) 
+                !ignoreParameterAllKeys.includes(name)
             )
         ); */
         // console.log(data);
@@ -699,7 +699,7 @@ export default {
       if (rcodes != null && rcodes != undefined) {
         for(let i=0;i<rcodes.length;i++){
           let rc=rcodes[i];
-          
+
           // 遍历
           if (rc.schema != undefined && rc.schema != null) {
             var respdata = [];
@@ -783,7 +783,7 @@ export default {
               //不存在schema，直接赋值
               that.multipData=rc;
             }
-            
+
           }
         }
         var multipKeys = Object.keys(that.multipData);

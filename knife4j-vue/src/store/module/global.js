@@ -2,7 +2,7 @@ const globals = {
   namespaced: true,
   state: {
     menuData: [],
-    language: 'zh-CN',
+    language: 'ko-KR',
     swagger: null,
     swaggerCurrentInstance: null,
     enableVersion: false,

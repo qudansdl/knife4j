@@ -417,7 +417,7 @@ export default {
         };
         // https://gitee.com/xiaoym/knife4j/issues/I58PG1
         let word = '';
-        if (this.getCurrentI18nInstance().lang === 'zh') {
+        if (this.getCurrentI18nInstance().lang === 'zh' || this.getCurrentI18nInstance().lang === 'ko') {
           word = wordText(instance);
         } else {
           word = wordTextUS(instance);
@@ -485,7 +485,7 @@ export default {
         if (this.markdownText == null || this.markdownText == "") {
           // 遍历得到markdown文本
           // this.markdownText = markdownText(this.data.instance);
-          if (this.getCurrentI18nInstance().lang === 'zh') {
+          if (this.getCurrentI18nInstance().lang === 'zh' || this.getCurrentI18nInstance().lang === 'ko') {
             this.markdownText = markdownText(instance);
           } else {
             this.markdownText = markdownTextUS(instance);
@@ -804,7 +804,7 @@ export default {
       var dstr = JSON.stringify(this.getHtmlData());
       // const template = document.getElementById("content_views").innerHTML;
       // return getDocumentTemplates(title, resumecss, template);
-      if (this.getCurrentI18nInstance().lang === 'zh') {
+      if (this.getCurrentI18nInstance().lang === 'zh' || this.getCurrentI18nInstance().lang === 'ko') {
         return getDocumentVueTemplates(title, resumecss, dstr);
       } else {
         return getDocumentVueTemplatesUS(title, resumecss, dstr);

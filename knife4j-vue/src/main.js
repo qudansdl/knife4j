@@ -42,7 +42,7 @@ Vue.use(Button)
 Vue.use(Tag)
 Vue.use(Divider)
 Vue.use(Tree)
-Vue.use(Dropdown) 
+Vue.use(Dropdown)
 
 
 import kloading from '@/components/loading'
@@ -130,13 +130,15 @@ String.prototype.startWith = function (str) {
   return reg.test(this);
 }
 
+import i18nKO from '@/assets/common/lang/ko'
 import i18nZH from '@/assets/common/lang/zh'
 import i18nEN from '@/assets/common/lang/en'
 
 //i18n
 const i18n = new VueI18n({
-  locale: 'zh-CN',
+  locale: 'ko-KR',
   messages: {
+    'ko-KR': i18nKO,
     'zh-CN': i18nZH,
     'en-US': i18nEN
   }

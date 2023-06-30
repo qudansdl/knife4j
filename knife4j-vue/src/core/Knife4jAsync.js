@@ -124,7 +124,7 @@ function SwaggerBootstrapUi(options) {
   this.menuData = null;
   this.store = options.store || {};
   this.localStore = options.localStore || {};
-  //  
+  //
   this.plus = options.plus;
   //  文档id
   this.docId = 'content';
@@ -163,7 +163,7 @@ function SwaggerBootstrapUi(options) {
     footerCustomContent: '',// 自定义footer内容
     enableSearch: true,// 是否显示搜索框
     enableOpenApi: true,// 是否显示OpenApi原始规范结构
-    enableHomeCustom: false,//  是否开启主页自定义配置，默认false 
+    enableHomeCustom: false,//  是否开启主页自定义配置，默认false
     homeCustomLocation: '',// 自定义主页的Markdown文档内容
     enableGroup: true,// 是否显示分组下拉框，默认true(即显示)，一般情况下，如果是单个分组的情况下，可以设置该属性为false，即不显示分组，那么也就不用选择了
 
@@ -186,7 +186,7 @@ function SwaggerBootstrapUi(options) {
     enableCacheOpenApiTable: false, // 是否开启缓存已打开的api文档
     enableHost: false,// 是否启用Host
     enableHostText: '',// 启用Host后文本
-    language: options.i18n || 'zh-CN' // 默认语言版本
+    language: options.i18n || 'ko-KR' // 默认语言版本
   };
   // SwaggerBootstrapUi增强注解地址
   this.extUrl = '/v2/api-docs';
@@ -1022,7 +1022,7 @@ SwaggerBootstrapUi.prototype.openSettings = function (data) {
       that.settings = mergeSetting;
       that.localStore.setItem(Constants.globalSettingsKey, mergeSetting);
       // 设置i18n
-      var i18n = KUtils.getValue(mergeSetting, 'language', 'zh-CN', true);
+      var i18n = KUtils.getValue(mergeSetting, 'language', 'ko-KR', true);
       this.localStore.setItem(Constants.globalI18nCache, i18n);
       setTimeout(() => {
         if (KUtils.checkUndefined(that.i18nVue)) {
@@ -1087,7 +1087,7 @@ SwaggerBootstrapUi.prototype.openV3Settings = function (data) {
         that.settings = mergeSetting;
         that.localStore.setItem(Constants.globalSettingsKey, mergeSetting);
         // 设置i18n
-        var i18n = KUtils.getValue(mergeSetting, 'language', 'zh-CN', true);
+        var i18n = KUtils.getValue(mergeSetting, 'language', 'ko-KR', true);
         this.localStore.setItem(Constants.globalI18nCache, i18n);
         setTimeout(() => {
           if (KUtils.checkUndefined(that.i18nVue)) {
@@ -2873,7 +2873,7 @@ SwaggerBootstrapUi.prototype.readSecurityContextSchemesCommon = function (securi
                           }
                       }
                   }
-              } 
+              }
           }
           */
           //OAS3 oauth2认证

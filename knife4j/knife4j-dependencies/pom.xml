@@ -38,14 +38,16 @@
     <properties>
     </properties>
     <distributionManagement>
-        <snapshotRepository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
         <repository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>sync.release</id>
+            <name>Sync Release Repository</name>
+            <url>https://nexus.basicit.co.kr/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>sync.snapshot</id>
+            <name>Sync Snapshot Repository</name>
+            <url>https://nexus.basicit.co.kr/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencyManagement>
         <dependencies>

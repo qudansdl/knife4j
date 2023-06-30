@@ -9,6 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <version>4.0.0.KR</version>
+
     <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
     <name>knife4j-openapi2-spring-boot-starter</name>
     <description>Spring Boot autoconfigure</description>
@@ -40,6 +42,7 @@
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-openapi2-ui</artifactId>
+            <version>4.0.0.KR</version>
         </dependency>
 
         <dependency>
@@ -98,6 +101,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
 
 </project>
