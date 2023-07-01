@@ -99,7 +99,7 @@ function SwaggerBootstrapUi(options) {
   } else {
     this.url = options.url || 'swagger-resources';
   }
-  this.i18n = options.i18n || 'zh-CN';
+  this.i18n = options.i18n || 'ko-KR';
   //  是否Knife4jAggregationDesktop
   this.desktop = options.desktop || false;
   this.desktopCode = null;
@@ -386,7 +386,7 @@ SwaggerBootstrapUi.prototype.analysisGroup = function () {
       // 创建分组元素
       that.createGroupElement();
     }, err => {
-      message.error('Knife4j文档请求异常');
+      message.error('Knife4j Document request exception');
       that.error(err);
     })
   } catch (err) {
@@ -775,7 +775,7 @@ SwaggerBootstrapUi.prototype.analysisApi = function (instance) {
       that.ajax(requestConfig, data => {
         that.analysisApiSuccess(data);
       }, err => {
-        message.error('Knife4j文档请求异常');
+        message.error('Knife4j Document request exception');
         that.error(err);
       })
       /*  DebugAxios.create().request({

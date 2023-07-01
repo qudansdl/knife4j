@@ -17,11 +17,11 @@
             <a-icon type="delete" /> <span v-html="$t('cacheText')"></span>
           </a-menu-item>
           <a-menu-divider />
-          <a-menu-item key="logout" @click="changeZh">
-            <a-icon type="environment" /> 简体中文
-          </a-menu-item>
           <a-menu-item key="triggerError" @click="changeEn">
             <a-icon type="environment" /> English
+          </a-menu-item>
+          <a-menu-item key="logout" @click="changeKO">
+            <a-icon type="environment" />  한국어
           </a-menu-item>
         </a-menu>
         <span class="action account">
@@ -43,7 +43,7 @@ export default {
   props: {
     documentTitle: {
       type: String,
-      default: "Knife4j接口文档"
+      default: "Knife4j Interface documentation"
     },
     headerClass: {
       type: String
@@ -90,6 +90,13 @@ export default {
       this.$store.dispatch("globals/setLang", "zh-CN");
       this.$localStore.setItem(constant.globalI18nCache, "zh-CN");
     },
+    changeKO() {
+      // 한국어
+      // console.log(this);
+      this.$i18n.locale = "ko-KR";
+      this.$store.dispatch("globals/setLang", "ko-KR");
+      this.$localStore.setItem(constant.globalI18nCache, "ko-KR");
+    },
     changeEn() {
       // 英文
       // console.log(this);
@@ -121,7 +128,7 @@ export default {
       try {
         this.$localStore.clear();
       } catch (error) { }
-      this.$message.info("清除本地缓存成功");
+      this.$message.info("Clear the local cache successfully");
     }
   }
 };
